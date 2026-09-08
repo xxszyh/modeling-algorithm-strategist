@@ -1,0 +1,4 @@
+interface:
+  display_name: "建模与算法策略师"
+  short_description: "针对具体问题比较候选模型并选择可验证且可计算的求解算法"
+  default_prompt: "使用 $modeling-algorithm-strategist 分析这道题，比较候选模型并推荐最合适的求解算法。"
