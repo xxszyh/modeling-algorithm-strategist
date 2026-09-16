@@ -1,6 +1,9 @@
 # 建模与算法策略师
 
-一个面向数学建模竞赛和实际建模问题的 Agent Skill。它先明确问题契约和硬约束，再比较少量结构不同的候选模型，选择与数学结构和计算规模相匹配的算法，并为结论设计可证伪的验证。
+[![DeepSeek Harness](https://img.shields.io/badge/DeepSeek_Harness-DSH_Skill-4f46e5)](https://github.com/deepseek-ai/deepseek-harness)
+[![CUMCM](https://img.shields.io/badge/CUMCM-数学建模-d97706)](https://www.mcm.edu.cn/)
+
+一个兼容 DeepSeek Harness（DSH）、Codex 及其他 `SKILL.md` Agent 的建模技能，面向 CUMCM、MCM/ICM 等数学建模竞赛和实际建模问题。它先明确问题契约和硬约束，再比较少量结构不同的候选模型，选择与数学结构和计算规模相匹配的算法，并为结论设计可证伪的验证。
 
 ## 设计目标
 
@@ -23,6 +26,30 @@
 不适用于单纯论文排版、语言润色、制图，或模型和算法已经完全确定后的纯代码实现。
 
 ## 安装
+
+### DeepSeek Harness（DSH）
+
+DSH 原生识别目录型 Agent Skill，无需把本项目改造成 JavaScript/Cordis 插件。项目级安装的优先级最高，适合只在当前仓库启用：
+
+```sh
+git clone https://github.com/xxszyh/modeling-algorithm-strategist.git .dsh/skills/modeling-algorithm-strategist
+```
+
+用户级安装可在任意项目中使用：
+
+```sh
+git clone https://github.com/xxszyh/modeling-algorithm-strategist.git ~/.dsh/skills/modeling-algorithm-strategist
+```
+
+Windows PowerShell 中可使用：
+
+```powershell
+git clone https://github.com/xxszyh/modeling-algorithm-strategist.git "$HOME/.dsh/skills/modeling-algorithm-strategist"
+```
+
+安装后启动或重启 DSH 会话；直接描述建模任务，或明确点名 `modeling-algorithm-strategist` 即可。DSH 也识别项目级 `.agents/skills/` 和用户级 `~/.agents/skills/`，便于与其他 Agent 共享同一份技能。发现顺序和格式说明见 [DSH Skills 官方文档](https://github.com/deepseek-ai/deepseek-harness/blob/master/docs/subsystems/skills.md)。
+
+### Codex / 其他 Agent Skills 客户端
 
 将仓库复制到 Agent 的 skills 目录。例如 Codex：
 
@@ -48,7 +75,7 @@ modeling-algorithm-strategist/
 
 ## 使用
 
-在支持 Skill 的 Agent 中调用：
+在支持显式 Skill 调用的 Agent 中调用：
 
 ```text
 $modeling-algorithm-strategist
@@ -59,6 +86,10 @@ $modeling-algorithm-strategist
 ```text
 请分析这道赛题，比较候选模型并推荐最合适的求解算法和验证方案。
 ```
+
+## 关键词
+
+`DSH` · `DeepSeek Harness` · `CUMCM` · `数学建模` · `mathematical modeling` · `operations research` · `optimization` · `model selection` · `algorithm selection` · `model validation`
 
 ## 内容说明
 

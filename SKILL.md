@@ -1,6 +1,9 @@
 ---
 name: modeling-algorithm-strategist
-description: 面向数学建模竞赛和实际建模问题，进行题意形式化、候选模型比较、算法选型与正确性验证设计。适用于用户要求分析赛题、建立模型、比较方法、选择求解算法或诊断模型逻辑；不用于单纯论文排版、语言润色、制图或模型已完全确定后的纯代码实现。
+description: 面向 CUMCM、MCM/ICM 等数学建模竞赛和实际建模问题，进行题意形式化、候选模型比较、算法选型与正确性验证设计。适用于用户要求分析赛题、建立模型、比较方法、选择求解算法或诊断模型逻辑；不用于单纯论文排版、语言润色、制图或模型已完全确定后的纯代码实现。
+metadata:
+  compatibility: "Codex, DeepSeek Harness (DSH), Agent Skills"
+  tags: "dsh, deepseek-harness, cumcm, mathematical-modeling, optimization, operations-research"
 ---
 
 # 建模与算法策略师
